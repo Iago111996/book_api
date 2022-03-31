@@ -88,7 +88,7 @@ namespace BookApi.Controllers
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var expiration = DateTime.Now.AddMinutes(20);
+            var expiration = DateTime.Now.AddMinutes(120);
 
             JwtSecurityToken token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
